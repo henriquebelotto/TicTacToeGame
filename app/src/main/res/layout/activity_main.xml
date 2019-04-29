@@ -35,17 +35,16 @@
             android:layout_width="@dimen/shutdownImageSize"
             android:layout_height="@dimen/shutdownImageSize"
             android:layout_marginEnd="24dp"
+            android:contentDescription="@string/close_app"
+            android:onClick="shutdownOnClick"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/poweroff_icon"
-            android:contentDescription="@string/close_app"
-            android:onClick="shutdownOnClick"/>
+            app:srcCompat="@drawable/poweroff_icon" />
 
 
     </android.support.constraint.ConstraintLayout>
-
 
 
     <ImageView
