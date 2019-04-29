@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    android:id="@+id/linearLayout"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="@dimen/pieceSize"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/marginPiece"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/winnerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/winner_text"
+            android:textAlignment="center"
+            android:textColor="@color/colorWin"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            android:gravity="start"/>
+
+        <ImageView
+            android:id="@+id/restartGameBtn"
+            android:layout_width="@dimen/pieceSize"
+            android:layout_height="@dimen/pieceSize"
+            android:contentDescription="@string/restart_game"
+            android:onClick="restartGameOnClick"
+            android:visibility="invisible"/>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="@dimen/sizeGrid"
+        android:layout_height="@dimen/sizeGrid"
+        android:background="@drawable/board"
+        app:columnCount="3"
+        app:orientation="horizontal"
+        app:rowCount="3">
+
+
+        <ImageView
+            android:layout_width="@dimen/pieceSize"
+            android:layout_height="@dimen/pieceSize"
+            android:contentDescription="@string/piecePosition"
+            android:layout_margin="@dimen/marginPiece"
+            android:onClick="showPieceOnClick"
+            android:tag="0"/>
+
+        <ImageView
+            android:layout_width="@dimen/pieceSize"
+            android:layout_height="@dimen/pieceSize"
+            android:contentDescription="@string/piecePosition"
+            android:layout_margin="@dimen/marginPiece"
+            android:onClick="showPieceOnClick"
+            android:tag="1" />
+
+        <ImageView
+            android:layout_width="@dimen/pieceSize"
+            android:layout_height="@dimen/pieceSize"
+            android:contentDescription="@string/piecePosition"
+            android:layout_margin="@dimen/marginPiece"
+            android:onClick="showPieceOnClick"
+            android:tag="2"/>
+
+        <ImageView
+            android:layout_width="@dimen/pieceSize"
+            android:layout_height="@dimen/pieceSize"
+            android:contentDescription="@string/piecePosition"
+            android:layout_margin="@dimen/marginPiece"
+            android:onClick="showPieceOnClick"
+            android:tag="3" />
+
+        <ImageView
+            android:layout_width="@dimen/pieceSize"
+            android:layout_height="@dimen/pieceSize"
+            android:contentDescription="@string/piecePosition"
+            android:layout_margin="@dimen/marginPiece"
+            android:onClick="showPieceOnClick"
+            android:tag="4"/>
+
+        <ImageView
+            android:layout_width="@dimen/pieceSize"
+            android:layout_height="@dimen/pieceSize"
+            android:contentDescription="@string/piecePosition"
+            android:layout_margin="@dimen/marginPiece"
+            android:onClick="showPieceOnClick"
+            android:tag="5"/>
+
+        <ImageView
+            android:layout_width="@dimen/pieceSize"
+            android:layout_height="@dimen/pieceSize"
+            android:contentDescription="@string/piecePosition"
+            android:layout_margin="@dimen/marginPiece"
+            android:onClick="showPieceOnClick"
+            android:tag="6"/>
+
+        <ImageView
+            android:layout_width="@dimen/pieceSize"
+            android:layout_height="@dimen/pieceSize"
+            android:contentDescription="@string/piecePosition"
+            android:layout_margin="@dimen/marginPiece"
+            android:onClick="showPieceOnClick"
+            android:tag="7"/>
+
+        <ImageView
+            android:layout_width="@dimen/pieceSize"
+            android:layout_height="@dimen/pieceSize"
+            android:contentDescription="@string/piecePosition"
+            android:layout_margin="@dimen/marginPiece"
+            android:onClick="showPieceOnClick"
+            android:tag="8"/>
+
+
+    </android.support.v7.widget.GridLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/marginPiece"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/xScoreTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/xScoreText"
+                android:textAlignment="textEnd"
+                android:textColor="@color/textColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/xScore"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/vsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resultText"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/oScore"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/textColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/oScoreTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/oScoreText"
+                android:textAlignment="textStart"
+                android:textColor="@color/textColor"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/shutdownImageSize"
+            android:layout_height="@dimen/shutdownImageSize"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/poweroff_icon"
+            android:contentDescription="@string/close_app"
+            android:onClick="shutdownOnClick"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+</LinearLayout>

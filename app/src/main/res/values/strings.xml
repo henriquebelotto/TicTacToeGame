@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tic Tac Toe Game</string>
+    <string name="piecePosition">position</string>
+    <string name="restart_game">restart game?</string>
+    <string name="draw">Draw!\nRestart game?</string>
+    <string name="xScoreText">X&#160;&#160;&#160;-</string>
+    <string name="resultText">vs</string>
+    <string name="oScoreText">-&#160;&#160;&#160;O</string>
+    <string name="close_app">Close App</string>
+    <string name="winner_text">%1$s has Won!\nPlay again?</string>
+</resources>
